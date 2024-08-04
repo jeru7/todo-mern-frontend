@@ -18,7 +18,7 @@ const TaskContainer = ({ taskItem, onUpdateTask, deleteTask, editTask }) => {
     e.stopPropagation()
     try {
       const response = await fetch(
-        `http://localhost:3000/tasks/${taskItem._id}`,
+        `https://todo-mern-frontend-two.vercel.app/tasks/${taskItem._id}`,
         {
           method: 'PATCH',
           headers: {

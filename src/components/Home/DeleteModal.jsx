@@ -2,7 +2,7 @@ const DeleteModal = ({ onClose, taskToDelete, onDeleteTask }) => {
   const deleteTask = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/tasks/${taskToDelete._id}`,
+        `https://todo-mern-frontend-two.vercel.app/tasks/${taskToDelete._id}`,
         {
           method: 'DELETE',
           headers: {

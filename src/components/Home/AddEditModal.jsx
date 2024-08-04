@@ -35,17 +35,20 @@ const AddEditModal = ({
   const addTask = async () => {
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:3000/tasks', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...task,
-          title: task.title.trim(),
-          description: task.description.trim(),
-        }),
-      })
+      const response = await fetch(
+        'https://todo-mern-frontend-two.vercel.app/tasks',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...task,
+            title: task.title.trim(),
+            description: task.description.trim(),
+          }),
+        }
+      )
 
       if (!response.ok) {
         throw new Error('Failed to add new task')
@@ -64,7 +67,7 @@ const AddEditModal = ({
     setLoading(true)
     try {
       const response = await fetch(
-        `http://localhost:3000/tasks/${taskItem._id}`,
+        `https://todo-mern-frontend-two.vercel.app/tasks/${taskItem._id}`,
         {
           method: 'PUT',
           headers: {
