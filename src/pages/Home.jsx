@@ -22,7 +22,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://todo-mern-frontend-two.vercel.app/tasks'
+          'https://todo-mern-backend-rust.vercel.app/tasks'
         )
         if (!response.ok) {
           throw new Error('Invalid response')

@@ -36,7 +36,7 @@ const AddEditModal = ({
     setLoading(true)
     try {
       const response = await fetch(
-        'https://todo-mern-frontend-two.vercel.app/tasks',
+        'https://todo-mern-backend-rust.vercel.app/tasks',
         {
           method: 'POST',
           headers: {
@@ -67,7 +67,7 @@ const AddEditModal = ({
     setLoading(true)
     try {
       const response = await fetch(
-        `https://todo-mern-frontend-two.vercel.app/tasks/${taskItem._id}`,
+        `https://todo-mern-backend-rust.vercel.app/tasks/${taskItem._id}`,
         {
           method: 'PUT',
           headers: {
